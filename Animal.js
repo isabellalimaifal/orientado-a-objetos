@@ -6,7 +6,7 @@ class Animal { //classe
     }
         
     movimentar() { //função
-        console.log('Sou um e estou me movimentando'); 
+        console.log('Sou um ', $this.nome_especie, ' e estou me movimentando'); 
     }
 }
 
