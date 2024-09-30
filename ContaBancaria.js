@@ -23,7 +23,7 @@ class ContaBancaria {
 }
 
 const c1 = new ContaBancaria();
-c1.depositar = 10;
+c1.depositar = (10);
 console.log(c1.mostrarSaldo());
 
 const c2 = new ContaBancaria();
