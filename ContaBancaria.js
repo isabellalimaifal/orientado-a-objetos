@@ -3,14 +3,25 @@ class ContaBancaria {
     nomeCorrentista;
     numeroConta;
 
-    sacar() {
-
+    constructor() {
+        this.numeroConta = 0;
+        this.saldo = 0;
+        this.nomeCorrentista = "";
     }
 
-    depositar(valorDeposito) {
-        if(valorDeposito > 0) {
+    sacar(_valorSaque) {
+        if(_valorSaque <= this.saldo) {
+        this.saldo -=
+        _valorSaque;
+    } else {
+        console.log("Saldo insuficiente");
+    }
+}
+    depositar(_valorDeposito) {
+        this.saldo = _saldo
+        if(_valorDeposito > 0) {
             this.saldo += 
-            valorDeposito;
+            _valorDeposito;
         } else {
             console.log("Valor inválido!");
         }
@@ -19,13 +30,10 @@ class ContaBancaria {
     mostrarSaldo() {
         return this.saldo; //retornar o atricuto salvo
     }
-
 }
 
 const c1 = new ContaBancaria();
-c1.depositar = (10);
+c1.depositar(10);
+c1.depositar(10);
+c1.mostrarSaldo();
 console.log(c1.mostrarSaldo());
-
-const c2 = new ContaBancaria();
-c2.depositar(49);
-console.log(c2.mostrarSaldo());
