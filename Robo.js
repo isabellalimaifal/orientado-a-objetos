@@ -1,42 +1,46 @@
-class Robo {
+class Robo { //classe robo
     nome;
     carga_bateria;
     gasto_por_acelerada;
     velocidade_atual;
 
-    constructor (nome, carga_bateria, gasto_por_acelerada) {
+    constructor (nome, carga_bateria, gasto_por_acelerada) { //carrega os atributos
         this.nome = nome;
         this.carga_bateria = carga_bateria;
         this.gasto_por_acelerada = gasto_por_acelerada;
         this.velocidade_atual = 0;
     }
 
-    exibirBateria() {
+    exibirBateria() { //função 
         console.log(`Bateria restante: ${this.carga_bateria}`);
     }
 
-    exibirVelocidade() {
+    exibirVelocidade() { //função
         console.log(`Velocidade atual: ${this.velocidade_atual}`);
     }
 
-    acelerar(valor) {
-        if (valor <= 0) {
+    acelerar(valor) {  //função carrega atributo 'valor'
+        if (valor <= 0) { // se valor for menor ou igual a 0 o programa vai executar o console
             console.log("O valor para acelerar deve ser maior que zero!");
             return;
         }
-        const bateria_necessaria = valor * this.gasto_por_acelerada;
-        if (bateria_necessaria > this.carga_bateria) {
+        const bateria_necessaria = valor * this.gasto_por_acelerada; //bateria_necessaria é igual ao valor da aceleração * o gasto_por_acelerada
+        if (bateria_necessaria > this.carga_bateria) { //se bateria_necessaria for maior que carga_bateria o programa vai executar o console
             console.log('Bateria insuficiente para acelerar!'); 
-        } else {
-            this.carga_bateria -= bateria_necessaria;
+        } else { //senão ele executa o else
+            this.carga_bateria -= bateria_necessaria; 
             this.velocidade_atual += valor;
             console.log(`Acelerou para ${this.velocidade_atual} km/h. Bateria restante ${this.carga_bateria}`);
         }
     }   
 
+    exibirNome() {
+        console.log(`Nome: ${this.nome}`)
+    }
 }
 
 const meuRobo = new Robo('Robo1', 100, 5);
+meuRobo.exibirNome();
 meuRobo.exibirBateria();
 meuRobo.acelerar(10);
 meuRobo.exibirVelocidade();
