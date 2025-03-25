@@ -45,7 +45,7 @@ minhaBiblioteca.adicionarLivro("Uma Vida Pequena", "Hanya Yanagihara");
 minhaBiblioteca.adicionarLivro("Noites Brancas", "Fiódor Dostoiévski");
 minhaBiblioteca.adicionarLivro("Notas do Subterrâneo", "Fiódor Dostoiévski");
 
-console.log("Agenda completa:");
+console.log("Lista de livos completa:");
 minhaBiblioteca.listarLivros();
 
 console.log("Removendo Noites Brancas...");
